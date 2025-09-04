@@ -1,0 +1,1 @@
+# polyharmonic_critic_equation
