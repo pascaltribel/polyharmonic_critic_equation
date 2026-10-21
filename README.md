@@ -6,8 +6,7 @@ Find a PINN-inspired way to obtain **nontrivial** solutions to *elliptic* *nonli
 $L u = f(u),$
 
 $L$ is an elliptic operator, for instance $L = -\Delta$ the Laplacian, $f$ is a real-valued function, which is nonlinear, for instance $f(u) = \lambda u + |u|^{p-2}u$, for $\lambda \in \mathbb{R}$ and $p>2$. The typical equation we wish to study is 
-$$  -\Delta u = \lambda u + |u|^{p-2}u.
-$$
+$$-\Delta u = \lambda u + |u|^{p-2}u.$$
 
 ## Motivation from nonlinear analysis :
 When $n\geq 3$, $p= 2^* := \frac{2n}{n-2}$, the problem is said to be *critical*, the symmetries of the equation allow for sequences of solutions that converge weakly to 0, but which concentrate at some points. This is one of the easiest toy-model of what happens in cases where standard analysis methods stop working. 
