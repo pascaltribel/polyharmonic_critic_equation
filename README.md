@@ -16,13 +16,13 @@ It is known that all the positive solutions of the problem
 
 $$-\Delta u = |u|^{2^*-2}u \quad \text{on }\mathbb{R}^n \tag{1}$$
 
-have a specific shape, there is $\mu>0$ and $z\in \mathbb{R}^n$ such that $u(x) = \mu^{\frac{n-2}{2}} \Big(\mu^2 + \frac{|x-z|^2}{\sqrt{n(n-2)}}\Big)^{\frac{n-2}{2}}$. Notice that all these solutions are obtained by transformation of the so-called standard bubble, $u(x) = \mu^{-\frac{n-2}{2}} \operatorname{B}\big(\frac{x-z}{\mu}\big)$, where 
+have a specific shape, there is $\mu>0$ and $z\in \mathbb{R}^n$ such that $u(x) = \mu^{\frac{n-2}{2}} \Big(\mu^2 + \frac{|x-z|^2}{\sqrt{n(n-2)}}\Big)^{\frac{n-2}{2}}$. Notice that all these solutions are obtained by transformation of the so-called standard bubble, $u(x) = \mu^{-\frac{n-2}{2}} \B{B}\big(\frac{x-z}{\mu}\big)$, where 
 
-$$  \operatorname{B}(x) := \Big(1+ \frac{|x|^2}{\sqrt{n(n-2)}}\Big)^{\frac{n-2}{2}}$$
+$$  B(x) := \Big(1+ \frac{|x|^2}{\sqrt{n(n-2)}}\Big)^{\frac{n-2}{2}}$$
 
 On the other hand, *sign-changing* solutions are far less understood, and while it is known that they have at least twice the energy of a positive one, i.e. that there exists $E_0>0$ such that 
 
-$$\|u\|_{L^{2^*}} \geq 2 \|\operatorname{B}\|_{L^{2^*}} + E_0 \quad \text{for all sign-changing solution $u$},$$
+$$\|u\|_{L^{2^*}} \geq 2 \|B\|_{L^{2^*}} + E_0 \quad \text{for all sign-changing solution $u$},$$
 
 it is not known what the minimal ones look like. Moreover, besides some symmetric solutions obtained by constructive methods, or abstract existence results, we do not have many examples of what their profiles are like. It is possible to show that using the stereographic projection of the sphere $\mathbb{S}^n$ onto $\mathbb{R}^n$, equation [(1)](#motivation-from-nonlinear-analysis-) is equivalent to solving 
 
