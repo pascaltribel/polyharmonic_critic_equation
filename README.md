@@ -50,12 +50,13 @@ the "integral" is computed by taking a mean among a given discrete set of points
 - [`equation_polyharmonique_critique`](/equation_polyharmonique_critique.ipynb) is the first attempt at the problem, set in a non-compact domain. This led us to choose to focus first on compact domains, as the choice of the behaviour of the function, and its inforcement, at infinity is not so clear.
 - In [`polynom_fx`](/polynom_fx.ipynb) we were looking for specific functions $f$ so that $u = f\cdot nn$ satisfies some boundary conditions as well as behavior at infinity.
 
-We started by considering the linear problem $ u'' = \alpha\, u$ on the circle, which is the most basic domain where periodicity can represent a challenge.
+We started by considering the linear problem $u'' = \alpha\, u$ on the circle, which is the most basic domain where periodicity can represent a challenge.
 - In [`Boule`](/Boule.ipynb) we explore how a trained PINN differs from true solutions (that are explicit and can be computed in this basic example), and specifically the distribution of the loss for various trainings.
 - [`closeness`](/closeness.ipynb) compares the loss of a PINN which is trained to solve an ODE versus a NN that is trained to look pointwise like a known solution of the ODE.
 - In [`Equation_cercle`](Equation_cercle.ipynb) we develop the basic ODE theory going from the linear problem $u'' = \alpha \,u$ to the nonlinear problem $u'' = u|u|^{p-2}$. In this ODE case, while we loose the explicit solutions, we are still able to describe entirely the phase space of the problem.
 - [`Heart`](/Heart.ipynb) is an adaptation of `Boule` to the nonlinear ODE problem. 
 - [`FD_solver`](/FD_solver.ipynb) is a finite-difference solver implementation of the previous two ODE problems.  
+- In [`biharmonic_circle`](/biharmonic_circle.ipynb), we try to approximate a diffeomorphism of a topologically correct initial candidate to deform it towards a correct solution by minimizing the residuals of the equation.  
 
 In a second step, we consider the nonlinear PDE $-\Delta_{Sph} u = u|u|^{p-2}$ on the sphere $\mathbb{S}^2$. 
 - In [`polyharm_2D`](/polyharm_2D.ipynb) we look for nontrivial solutions by enforcing a condition $u(x_0) = u_0 >0$ at some $x_0 \in \mathbb{S}^2$. 
