@@ -3,7 +3,7 @@
 ## Main objective : 
 Find a PINN-inspired way to obtain **nontrivial** solutions to *elliptic* *nonlinear* equations in arbitrary domains and dimensions. We aim at obtaining solutions $u$ to problems of the form
 
-$ L u = f(u), $
+$L u = f(u),$
 
 $L$ is an elliptic operator, for instance $L = -\Delta$ the Laplacian, $f$ is a real-valued function, which is nonlinear, for instance $f(u) = \lambda u + |u|^{p-2}u$, for $\lambda \in \mathbb{R}$ and $p>2$. The typical equation we wish to study is 
 $$  -\Delta u = \lambda u + |u|^{p-2}u.
