@@ -76,3 +76,7 @@ we look for solutions of the form
 $$u(x) = P(x) \, u_0(F(x)),$$  
 
 where $u_0$ is a given "basis function" that satisfies the boundary condition and has some specific "topological" properties, $P : B_2 \to \mathbb{R}^+_0$ is a positive function, $F : B_2 \to B_2$ is a diffeomorphism (bijective continuous and differentiable) such that $F(\partial B_2) = \partial B_2$. We then train $nn$ to find $P$ and $F$, so that $u$ solves the equation, and satisfies the boundary conditions as well as the same topological properties as $u_0$ by construction.  
+
+***TODO :***  
+- Comprendre comment faire $F : D \to D$
+- Pq on va vers solution triviale quand même? 
