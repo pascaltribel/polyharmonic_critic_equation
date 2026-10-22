@@ -31,9 +31,9 @@ $$-\Delta_{Sph}u + \frac{n(n-2)}{4} u = |u|^{2^*-2}u \quad \text{on }\mathbb{S}^
 The latter has the advantage of being defined on a compact surface $\mathbb{S}^n$. 
 
 Similarly, there have been many investigations in the existence, uniqueness, multiplicity of solutions properties for equations of the form 
-$$\left\{\begin{array} -\Delta u = \lambda u + |u|^{2^*-2}u & \text{on }\Omega \\ u = 0 &\text{on } \partial \Omega,\end{array}\right.$$
+$$\left\{\begin{aligned} -\Delta u = \lambda u + |u|^{2^*-2}u & \text{on }\Omega \\ u = 0 &\text{on } \partial \Omega,\end{aligned}\right.$$
 
-where $\Omega$ is a bounded open set of $R^n$. When $\Omega$ is for instance the ball $B_n := \{x\in \mathbb{R}^n \,:\, |x| < 1\}$, we know that there exists a positive solution if and only if $\lambda \in (\lambda_\*,\lambda_1)$, where $\lambda_1$ the first eigenvalue of the Laplacian in $B_n$, and $\lambda_\* = \begin{cases}\frac{\lambda_1}{4} & \text{if } n = 3 \\ 0 & \text{if }n\geq 4\end{cases}$, and there are no nontrivial solutions when $\lambda\leq 0$. Obtaining explicit *sign-changing* solutions for arbitrary $\lambda >0$ is a hard problem.
+where $\Omega$ is a bounded open set of $R^n$. When $\Omega$ is for instance the ball $B_n := \{x\in \mathbb{R}^n \,:\, |x| < 1\}$, we know that there exists a positive solution if and only if $\lambda \in (\lambda_*,\lambda_1)$, where $\lambda_1$ the first eigenvalue of the Laplacian in $B_n$, and $\lambda_* = \begin{cases}\frac{\lambda_1}{4} & \text{if } n = 3 \\ 0 & \text{if }n\geq 4\end{cases}$, and there are no nontrivial solutions when $\lambda\leq 0$. Obtaining explicit *sign-changing* solutions for arbitrary $\lambda >0$ is a hard problem.
 
 Both of these examples show the significance of obtaining a method to find nontrivial solutions to critical elliptic equations, and more generally to nonlinear equation. When $n=2$ and $p>2$, or $n\geq 3$ and $2<p<2^*$, the problem is said to be *sub-critical*: Sequences of solutions remain compact, and existence result can be obtained by classical variational methods that have been developed since the 60's in the field of nonlinear analysis. It is however rare that explicit profiles of solutions can be described.
 
@@ -54,7 +54,6 @@ We started by considering the linear problem $u'' = \alpha\, u$ on the circle, w
 - In [`Equation_cercle`](Equation_cercle.ipynb) we develop the basic ODE theory going from the linear problem $u'' = \alpha \,u$ to the nonlinear problem $u'' = u|u|^{p-2}$. In this ODE case, while we loose the explicit solutions, we are still able to describe entirely the phase space of the problem.
 - [`Heart`](/Heart.ipynb) is an adaptation of `Boule` to the nonlinear ODE problem. 
 - [`FD_solver`](/FD_solver.ipynb) is a finite-difference solver implementation of the previous two ODE problems.  
-- In [`biharmonic_circle`](/biharmonic_circle.ipynb), we try to approximate a diffeomorphism of a topologically correct initial candidate to deform it towards a correct solution by minimizing the residuals of the equation.  
 
 In a second step, we consider the nonlinear PDE $-\Delta_{Sph} u = u|u|^{p-2}$ on the sphere $\mathbb{S}^2$. 
 - In [`polyharm_2D`](/polyharm_2D.ipynb) we look for nontrivial solutions by enforcing a condition $u(x_0) = u_0 >0$ at some $x_0 \in \mathbb{S}^2$. 
@@ -71,10 +70,13 @@ $$\begin{cases}
 
 we look for solutions of the form 
 
-$$u(x) = P(x) \, u_0(F(x)),$$  
+$$u(x) = P(x) \, u_0(F(x)), 
+$$ 
 
 where $u_0$ is a given "basis function" that satisfies the boundary condition and has some specific "topological" properties, $P : B_2 \to \mathbb{R}^+_0$ is a positive function, $F : B_2 \to B_2$ is a diffeomorphism (bijective continuous and differentiable) such that $F(\partial B_2) = \partial B_2$. We then train $nn$ to find $P$ and $F$, so that $u$ solves the equation, and satisfies the boundary conditions as well as the same topological properties as $u_0$ by construction.  
 
+- In [`biharmonic_circle`](/biharmonic_circle.ipynb), we try to approximate a diffeomorphism of a topologically correct initial candidate to deform it towards a correct solution by minimizing the residuals of the equation.  
+
+
 ***TODO :***  
-- Comprendre comment faire $F : D \to D$
-- Pq on va vers solution triviale quand même? 
+- Comprendre comment faire $F : D \to D$ en conservant le bord
