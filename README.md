@@ -31,18 +31,16 @@ $$-\Delta_{Sph}u + \frac{n(n-2)}{4} u = |u|^{2^*-2}u \quad \text{on }\mathbb{S}^
 The latter has the advantage of being defined on a compact surface $\mathbb{S}^n$. 
 
 Similarly, there have been many investigations in the existence, uniqueness, multiplicity of solutions properties for equations of the form 
-$$\left\{ \begin{aligned} 
-    -\Delta u &= \lambda u + |u|^{2^*-2}u & & \text{on }\Omega \\
-    u &= 0 & &\text{on } \partial \Omega,\end{aligned}\right.$$
+$$\left\{\begin{array} -\Delta u = \lambda u + |u|^{2^*-2}u & \text{on }\Omega \\ u = 0 &\text{on } \partial \Omega,\end{array}\right.$$
 
-where $\Omega$ is a bounded open set of $R^n$. When $\Omega$ is for instance the ball $B_n := \{x\in \mathbb{R}^n \,:\, |x| < 1\}$, we know that there exists a positive solution if and only if $\lambda \in (\lambda_*,\lambda_1)$, where $\lambda_1$ the first eigenvalue of the Laplacian in $B_n$, and $\lambda_* = \begin{cases}\frac{\lambda_1}{4} & \text{if } n = 3 \\ 0 & \text{if }n\geq 4\end{cases}$, and there are no nontrivial solutions when $\lambda\leq 0$. Obtaining explicit *sign-changing* solutions for arbitrary $\lambda >0$ is a hard problem.
+where $\Omega$ is a bounded open set of $R^n$. When $\Omega$ is for instance the ball $B_n := \{x\in \mathbb{R}^n \,:\, |x| < 1\}$, we know that there exists a positive solution if and only if $\lambda \in (\lambda_\*,\lambda_1)$, where $\lambda_1$ the first eigenvalue of the Laplacian in $B_n$, and $\lambda_\* = \begin{cases}\frac{\lambda_1}{4} & \text{if } n = 3 \\ 0 & \text{if }n\geq 4\end{cases}$, and there are no nontrivial solutions when $\lambda\leq 0$. Obtaining explicit *sign-changing* solutions for arbitrary $\lambda >0$ is a hard problem.
 
 Both of these examples show the significance of obtaining a method to find nontrivial solutions to critical elliptic equations, and more generally to nonlinear equation. When $n=2$ and $p>2$, or $n\geq 3$ and $2<p<2^*$, the problem is said to be *sub-critical*: Sequences of solutions remain compact, and existence result can be obtained by classical variational methods that have been developed since the 60's in the field of nonlinear analysis. It is however rare that explicit profiles of solutions can be described.
 
 ## The PINN approach :
 We train a neural network $nn$ to minimise a given *loss* determined by the problem at hand, in this case 
 
-$$\mathcal{L}(nn) = \int \Big[\lambda\, nn(x) + |nn(x)|^{p-2}nn(x) + \Delta nn(x) \Big]^2 dx$$
+$$\mathcal{L}(nn) = \int \Big[\lambda nn(x) + |nn(x)|^{p-2}nn(x) + \Delta nn(x) \Big]^2 dx$$
 
 the "integral" is computed by taking a mean among a given discrete set of points. We wish to only minimise this loss function, while all the other conditions (periodicity in the sphere case, boundary conditions, ...) are strongly enforced by the model. The hard part consists in handling the properties of nonlinear elliptic PDEs while staying away from the trivial solution $u \equiv 0$.  
 
